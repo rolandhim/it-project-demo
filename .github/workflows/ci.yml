@@ -1,0 +1,48 @@
+name: CI
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+jobs:
+  lint-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # === 視乎你哋嘅 stack，揀返對應嘅 setup ===
+
+      # --- Node.js ---
+      # - uses: actions/setup-node@v4
+      #   with:
+      #     node-version: 20
+      #     cache: npm
+      # - run: npm ci
+      # - run: npm run lint
+      # - run: npm test
+
+      # --- Python ---
+      # - uses: actions/setup-python@v5
+      #   with:
+      #     python-version: "3.12"
+      # - run: pip install -e ".[dev]"
+      # - run: ruff check .
+      # - run: pytest
+
+      - name: 佔位 - 揀返 stack 之後刪走呢步
+        run: echo 'CI placeholder - 喺呢度設定你哋嘅 lint + test'
+
+  security-scan:
+    runs-on: ubuntu-latest
+    permissions:
+      security-events: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v3
+        with:
+          languages: javascript, python
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v3

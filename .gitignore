@@ -1,0 +1,40 @@
+# === 通用 ===
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+.env
+.env.*
+!.env.example
+
+# === Node / JavaScript ===
+node_modules/
+dist/
+build/
+coverage/
+*.tsbuildinfo
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# === Python ===
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+
+# === IDE ===
+.idea/
+.vscode/
+*.swp
+
+# === 部署 / 其他 ===
+.vercel/
+.netlify/
+terraform/.terraform/
+*.tfstate*

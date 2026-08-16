@@ -1,0 +1,8 @@
+# 呢個係 template 嘅 LICENSE — 開 repo 嗰陣要揀定 license
+#
+# 選擇：
+# 1. MIT        — 開放源碼，最常見
+# 2. Apache 2.0 — 開放源碼，有 patent grant
+# 3. 內部專用   — 唔放 LICENSE 檔，喺 README 寫明「Private / Internal use only」
+#
+# 揀好之後刪走呢個 comment，貼返正式 license 全文（https://choosealicense.com/ 攞）。

@@ -1,0 +1,10 @@
+# CODEOWNERS — 指定邊啲路徑要邊個 team 批准先 merge
+# 格式: <path> @owner1 @owner2
+
+# 例：
+# /src/core/        @tech-leads
+# /src/payment/     @payment-team @security-team
+# /docs/            @anyone
+
+# 未指定嘅路徑 → 預設
+* @rolandhim
